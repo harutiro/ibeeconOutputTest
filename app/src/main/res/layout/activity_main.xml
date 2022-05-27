@@ -1,18 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/uuid_edit_textbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="uuid"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toTopOf="@+id/majar_edit_textbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/majar_edit_textbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="major"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toTopOf="@+id/minor_edit_textbox"
+            app:layout_constraintEnd_toEndOf="@+id/uuid_edit_textbox"
+            app:layout_constraintStart_toStartOf="@+id/uuid_edit_textbox"
+            app:layout_constraintTop_toBottomOf="@+id/uuid_edit_textbox" />
+
+        <EditText
+            android:id="@+id/minor_edit_textbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="minor"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toTopOf="@+id/ibeacon_stop_button"
+            app:layout_constraintEnd_toEndOf="@+id/majar_edit_textbox"
+            app:layout_constraintStart_toStartOf="@+id/majar_edit_textbox"
+            app:layout_constraintTop_toBottomOf="@+id/majar_edit_textbox" />
+
+        <Button
+            android:id="@+id/ibeacon_stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stop"
+            app:layout_constraintBottom_toTopOf="@+id/state_check_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ibeecon_start_button"
+            app:layout_constraintTop_toBottomOf="@+id/minor_edit_textbox" />
+
+        <Button
+            android:id="@+id/ibeecon_start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start"
+            app:layout_constraintBottom_toBottomOf="@+id/ibeacon_stop_button"
+            app:layout_constraintEnd_toStartOf="@+id/ibeacon_stop_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ibeacon_stop_button" />
+
+        <Button
+            android:id="@+id/state_check_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="check"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ibeecon_start_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
