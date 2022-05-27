@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -18,6 +16,7 @@
             android:gravity="start|top"
             android:hint="uuid"
             android:inputType="textMultiLine"
+            android:text="ef43f8dc-be95-4e78-850f-d9172bbadf76"
             app:layout_constraintBottom_toTopOf="@+id/majar_edit_textbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +30,7 @@
             android:gravity="start|top"
             android:hint="major"
             android:inputType="textMultiLine"
+            android:text="1"
             app:layout_constraintBottom_toTopOf="@+id/minor_edit_textbox"
             app:layout_constraintEnd_toEndOf="@+id/uuid_edit_textbox"
             app:layout_constraintStart_toStartOf="@+id/uuid_edit_textbox"
@@ -44,6 +44,7 @@
             android:gravity="start|top"
             android:hint="minor"
             android:inputType="textMultiLine"
+            android:text="12345"
             app:layout_constraintBottom_toTopOf="@+id/ibeacon_stop_button"
             app:layout_constraintEnd_toEndOf="@+id/majar_edit_textbox"
             app:layout_constraintStart_toStartOf="@+id/majar_edit_textbox"
@@ -75,6 +76,17 @@
             android:layout_height="wrap_content"
             android:text="check"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ibeecon_start_button" />
+
+        <TextView
+            android:id="@+id/state_textbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="電波出てない"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/state_check_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ibeecon_start_button" />
